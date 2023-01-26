@@ -119,18 +119,36 @@ let profitAverage = 0
 
 let newArray = []
 
-console.log("-------------------------")
 
-
+// created a for loop to cycle through number elements
+// of the array and create new array with numbers only
 for (let i = 0; i < finances.length - 1; i++) {
-
-
+    
+    
     let profits = finances[i + 1][1] - finances[i][1];
-
+    
     newArray.push(profits);
-
+    
+    profitAverage = profits / finances.length
+    sum += finances[i][1]
+    
 }
+// Math method to find out the largest and smalles integer in the new array
+maxProfit = Math.max(...newArray);
+minProfit = Math.min(...newArray);
 
+// grabbing index from new array of the largest and smallest integer
+indexMaxProfit = newArray.indexOf(maxProfit) + 1;
+indexMinProfit = newArray.indexOf(minProfit) + 1
+
+console.log("-------------------------")
 console.log("Financial Analysis");
 console.log("--------------------------");
 console.log("Total Months: " + finances.length);
+console.log("Total: $" + sum);
+
+// toFixed() method is used to round decimal places to unit required
+console.log("Average Change: $" + profitAverage.toFixed(2));
+// Used index from new array to locate month in original array and concatenated them to console
+console.log("Greatest Increase in Profits: " + finances[indexMaxProfit][0] + " ($" + maxProfit + ")");
+console.log("Greatest Decrease in Profits: " + finances[indexMinProfit][0] + " ($" + minProfit + ")");
