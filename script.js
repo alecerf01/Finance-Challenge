@@ -111,3 +111,26 @@ var finances = [
 // Average  Change: $-2315.12
 // Greatest Increase in Profits: Feb-2012 ($1926159)
 // Greatest Decrease in Profits: Sep-2013 ($-2196167)
+
+let sum = 0;
+let maxProfit = 0
+let minProfit = 0
+let profitAverage = 0
+
+let newArray = []
+
+console.log("-------------------------")
+
+
+for (let i = 0; i < finances.length - 1; i++) {
+
+
+    let profits = finances[i + 1][1] - finances[i][1];
+
+    newArray.push(profits);
+
+}
+
+console.log("Financial Analysis");
+console.log("--------------------------");
+console.log("Total Months: " + finances.length);
