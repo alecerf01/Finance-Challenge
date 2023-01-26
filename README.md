@@ -12,6 +12,6 @@ Used JavaScript Methods including indexOf() which denoted the index of a number 
 
 **Below is the attached link for the deployed application**
 
-Click [here](https://alecerf01.github.io/Random-Password-Generator/) to go to my page.
+Click [here](https://alecerf01.github.io/Finance-Challenge/) to go to my page.
 
 The Page is almost completely empty apart from an h1 tag to let user know to check console as that is where the work is being done!
